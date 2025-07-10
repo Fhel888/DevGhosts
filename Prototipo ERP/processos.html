@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Processos | ERP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">BlessFuture</a>
+            <nav class="main-nav"></nav>
+        </div>
+    </header>
+
+    <div class="page-container">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <h2>Navegação ERP</h2>
+                <ul>
+                    <li><a href="index.html">🏠 Home</a></li>
+                    <li><a href="clientes.html">👥 Clientes</a></li>
+                    <li><a href="processos.html">📁 Processos</a></li>
+                    <li><a href="usuarios.html">👽 Criar conta de Funcionário</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Painel de Processos</h1>
+                    <input type="text" id="search-input" placeholder="Buscar por processo, cliente...">
+                    <button id="add-process-btn" class="btn-primary">Novo Processo</button>
+                </div>
+                
+                <p>Lista de todos os processos em andamento ou concluídos.</p>
+                
+                <div class="filter-controls">
+                    <div>
+                        <label for="filter-client-select">Cliente:</label>
+                        <select id="filter-client-select">
+                            <option value="all">Todos os Clientes</option>
+                            </select>
+                    </div>
+                    <div>
+                        <label for="filter-status-select">Status:</label>
+                        <select id="filter-status-select">
+                            <option value="all">Todos os Status</option>
+                            <option value="Em Andamento">Em Andamento</option>
+                            <option value="Concluído">Concluído</option>
+                            <option value="Pausado">Pausado</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="sort-processes-select">Ordenar por:</label>
+                        <select id="sort-processes-select">
+                            <option value="name-asc">Nome do Processo (A-Z)</option>
+                            <option value="name-desc">Nome do Processo (Z-A)</option>
+                            <option value="client-asc">Cliente (A-Z)</option>
+                            <option value="client-desc">Cliente (Z-A)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="process-list-container">
+                    <div class="process-list-header">
+                        <span>Nome do Processo</span>
+                        <span>Cliente</span>
+                        <span>Status</span>
+                    </div>
+                    <ul id="process-list">
+                        </ul>
+                    <div class="pagination-controls">
+                        <button id="prev-button">Anterior</button>
+                        <span id="page-info"></span>
+                        <button id="next-button">Próximo</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Simulador ERP. Designed by DevGhosts</p>
+        </div>
+    </footer>
+
+    <div id="process-details-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="detail-processo-nome">Nome do Processo</h2>
+                <button id="close-details-modal-btn" class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h3>Detalhes do Processo</h3>
+                <div class="details-grid">
+                    <div><strong>ID do Processo:</strong> <span id="detail-processo-id"></span></div>
+                    <div><strong>Status:</strong> <span id="detail-processo-status"></span></div>
+                </div>
+                <hr class="details-hr">
+                <h3>Informações do Cliente</h3>
+                <div class="details-grid">
+                    <div><strong>Empresa:</strong> <span id="detail-cliente-nome"></span></div>
+                    <div><strong>Responsável:</strong> <span id="detail-cliente-responsavel"></span></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="delete-process-btn" class="btn-danger">Excluir Processo</button>
+                <button id="access-process-btn" class="btn-primary">Acessar Processo</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="add-process-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Novo Processo</h2>
+                <button id="close-add-modal-btn" class="close-modal">&times;</button>
+            </div>
+            <form id="add-process-form" class="modal-body">
+                <div class="form-group">
+                    <label for="new-process-name">Nome do Processo:</label>
+                    <input type="text" id="new-process-name" required placeholder="Ex: Desenvolvimento do novo App">
+                </div>
+                <div class="form-group">
+                    <label for="new-process-client-select">Cliente:</label>
+                    <select id="new-process-client-select" required>
+                        </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="cancel-add-process-btn" class="btn-secondary">Cancelar</button>
+                    <button type="submit" id="save-new-process-btn" class="btn-primary">Salvar Processo</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="processos.js" defer></script>
+</body>
+</html>

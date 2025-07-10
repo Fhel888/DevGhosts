@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Clientes | ERP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">BlessFuture</a>
+            <nav class="main-nav"></nav>
+        </div>
+    </header>
+
+    <div class="page-container">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <h2>Navegação ERP</h2>
+                <ul>
+                    <li><a href="index.html">🏠 Home</a></li>
+                    <li><a href="clientes.html">👥 Clientes</a></li>
+                    <li><a href="processos.html">📁 Processos</a></li>
+                    <li><a href="usuarios.html">👽 Criar conta de Funcionário</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Painel de Clientes</h1>
+                    <input type="text" id="search-input" placeholder="Buscar por nome...">
+                    <button id="add-client-btn" class="btn-primary">Cadastrar Cliente</button>
+                </div>
+                
+                <div class="filter-controls">
+                    <label for="sort-clients-select">Ordenar por:</label>
+                    <select id="sort-clients-select">
+                        <option value="name-asc">Nome (A-Z)</option>
+                        <option value="name-desc">Nome (Z-A)</option>
+                        <option value="date-desc">Mais Recentes</option>
+                        <option value="date-asc">Mais Antigos</option>
+                    </select>
+                </div>
+                
+                <div class="client-list-container">
+                    <ul id="client-list">
+                        </ul>
+                    <div class="pagination-controls">
+                        <button id="prev-button">Anterior</button>
+                        <span id="page-info"></span>
+                        <button id="next-button">Próximo</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Simulador ERP. Designed by DevGhosts</p>
+        </div>
+    </footer>
+
+    <div id="add-client-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Cadastrar Novo Cliente</h2>
+            <form id="add-client-form">
+                <div class="form-grid">
+                    <div>
+                        <label for="company-name">Nome da Empresa</label>
+                        <input type="text" id="company-name" placeholder="Ex: Soluções Inovadoras S.A." required>
+                    </div>
+                    <div>
+                        <label for="cnpj">CNPJ</label>
+                        <input type="text" id="cnpj" placeholder="00.000.000/0000-00" required>
+                    </div>
+                    <div>
+                        <label for="responsavel">Responsável</label>
+                        <input type="text" id="responsavel" placeholder="Ex: Ana da Silva" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="contato@empresa.com" required>
+                    </div>
+                    <div class="full-width">
+                        <label for="telefone">Telefone de Contato</label>
+                        <input type="tel" id="telefone" placeholder="(11) 99999-9999" required>
+                    </div>
+                </div>
+                
+                <div class="modal-actions">
+                    <button type="button" id="cancel-add-btn" class="btn-secondary">Cancelar</button>
+                    <button type="submit" class="btn-primary">Salvar Cliente</button>
+                </div>
+            </form>
+            <button id="close-add-modal-btn" class="close-modal">&times;</button>
+        </div>
+    </div>
+
+    <div id="client-details-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="detail-nome">Nome da Empresa</h2>
+                <button id="close-details-modal-btn" class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="details-grid">
+                    <div><strong>CNPJ:</strong> <span id="detail-cnpj"></span></div>
+                    <div><strong>Responsável:</strong> <span id="detail-responsavel"></span></div>
+                    <div><strong>Email:</strong> <span id="detail-email"></span></div>
+                    <div><strong>Telefone:</strong> <span id="detail-telefone"></span></div>
+                    <div><strong>Cliente desde:</strong> <span id="detail-data-cadastro"></span></div>
+                </div>
+                <hr class="details-hr">
+                <h3>Processos Associados</h3>
+                <ul id="detail-process-list" class="process-list">
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button id="delete-client-btn" class="btn-danger">Excluir Cliente</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="clientes.js" defer></script>
+
+</body>
+</html>

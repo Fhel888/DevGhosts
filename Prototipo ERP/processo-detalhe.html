@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Processo | ERP</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">BlessFuture</a>
+            <nav class="main-nav"></nav>
+        </div>
+    </header>
+
+    <div class="page-container">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <h2>Navegação ERP</h2>
+                <ul>
+                    <li><a href="index.html">🏠 Home</a></li>
+                    <li><a href="#">📁 Processos</a></li>
+                    <li><a href="#">📄 Relatórios</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+            <div class="container">
+                <h1 id="process-title">Carregando detalhes do processo...</h1>
+                <p>Aqui você poderá guiar a exibição das informações detalhadas deste processo.</p>
+                <a href="javascript:history.back()" class="btn-secondary" style="text-decoration: none; display: inline-block; margin-top: 20px;">Voltar</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Simulador ERP. Designed by DevGhosts</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Pega os parâmetros da URL
+            const urlParams = new URLSearchParams(window.location.search);
+            // Pega o valor do parâmetro 'id'
+            const processId = urlParams.get('id');
+
+            const titleElement = document.getElementById('process-title');
+
+            if (processId) {
+                // Em um projeto real, você usaria esse ID para buscar os dados do processo no back-end
+                console.log(`Buscando dados do processo com ID: ${processId}`);
+                titleElement.textContent = `Detalhes do Processo: ${processId}`;
+            } else {
+                titleElement.textContent = 'ID do Processo não encontrado.';
+            }
+        });
+    </script>
+</body>
+</html>

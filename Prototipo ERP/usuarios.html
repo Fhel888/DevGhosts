@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Usuários | ERP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">BlessFuture</a>
+            <nav class="main-nav"></nav>
+        </div>
+    </header>
+
+    <div class="page-container">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <h2>Navegação ERP</h2>
+                <ul>
+                    <li><a href="index.html">🏠 Home</a></li>
+                    <li><a href="clientes.html">👥 Clientes</a></li>
+                    <li><a href="processos.html">📁 Processos</a></li>
+                    <li><a href="usuarios.html">👽 Criar conta de Funcionário</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Painel de Usuários</h1>
+                    <input type="text" id="search-input" placeholder="Buscar por nome ou email...">
+                    <button id="add-user-btn" class="btn-primary">Cadastrar Usuário</button>
+                </div>
+                
+                <p>Lista de todos os usuários com acesso ao sistema.</p>
+                
+                <div class="user-list-container">
+                    <div class="user-list-header">
+                        <span>Nome Completo</span>
+                        <span>Email</span>
+                        <span>Cargo</span>
+                        <span>Status</span> </div>
+                    <ul id="user-list">
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Simulador ERP. Designed by DevGhosts</p>
+        </div>
+    </footer>
+
+    <div id="add-user-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Cadastrar Novo Usuário</h2>
+                <button id="close-add-modal-btn" class="close-modal">&times;</button>
+            </div>
+            <form id="add-user-form" class="modal-body" novalidate>
+                <div class="form-group">
+                    <label for="user-full-name">Nome Completo</label>
+                    <input type="text" id="user-full-name" name="fullName" placeholder="Digite o nome completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="user-email">Email</label>
+                    <input type="email" id="user-email" name="email" placeholder="email@exemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="user-role">Cargo</label>
+                    <input type="text" id="user-role" name="role" placeholder="Ex: Desenvolvedor" required>
+                </div>
+                <div class="form-group">
+                    <label for="user-password">Senha</label>
+                    <input type="password" id="user-password" name="password" placeholder="Mínimo de 8 caracteres" required>
+                </div>
+                <div class="form-group">
+                    <label for="user-confirm-password">Confirmar Senha</label>
+                    <input type="password" id="user-confirm-password" name="confirmPassword" placeholder="Repita a senha" required>
+                </div>
+
+                <div id="error-message" class="error-message"></div>
+
+                <div class="modal-footer">
+                    <button type="button" id="cancel-add-btn" class="btn-secondary">Cancelar</button>
+                    <button type="submit" class="btn-primary">Salvar Usuário</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div id="user-details-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="detail-usuario-nome"></h2>
+                <button id="close-details-modal-btn" class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h3>Detalhes do Usuário</h3>
+                <div class="details-grid">
+                    <div><strong>ID:</strong> <span id="detail-usuario-id"></span></div>
+                    <div><strong>Email:</strong> <span id="detail-usuario-email"></span></div>
+                    <div><strong>Cargo:</strong> <span id="detail-usuario-cargo"></span></div>
+                    <div><strong>Status:</strong> <span id="detail-usuario-status"></span></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="disassociate-user-btn" class="btn-danger">Desvincular Usuário</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="usuarios.js" defer></script>
+</body>
+</html>
