@@ -435,3 +435,86 @@ body {
     margin-top: 1rem;
     border-top: 1px solid #eee;
 }
+
+/* Estilos para a lista de setores */
+.list-view-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 1.5rem;
+}
+
+.list-header {
+    display: grid;
+    /* Define 3 colunas */
+    grid-template-columns: 2fr 1.5fr 1fr; 
+    padding: 1rem 1.5rem;
+    font-weight: bold;
+    color: #555;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+#sector-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sector-list-item { /* Estilo para cada LINHA */
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr; /* Mesmas 3 colunas do header */
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer; /* O mais importante: torna a linha clicável */
+    transition: background-color 0.2s ease;
+}
+
+.sector-list-item:last-child {
+    border-bottom: none;
+}
+
+.sector-list-item:hover {
+    background-color: #f9f9f9;
+}
+
+/* Estilos para a lista de setores */
+.list-view-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 1.5rem;
+}
+
+.list-header {
+    display: grid;
+    /* Define 3 colunas */
+    grid-template-columns: 2fr 1.5fr 1.5fr; 
+    padding: 1rem 1.5rem;
+    font-weight: bold;
+    color: #555;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+#sector-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sector-list-item { /* Estilo para cada LINHA */
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.5fr; /* Mesmas 3 colunas do header */
+    padding: 1rem 1.5rem;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.sector-list-item:last-child {
+    border-bottom: none;
+}
+
+.sector-list-item:hover {
+    background-color: #f9f9f9;
+}

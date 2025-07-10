@@ -21,9 +21,10 @@
                 <h2>Navegação ERP</h2>
                 <ul>
                     <li><a href="index.html">🏠 Home</a></li>
-                    <li><a href="clientes.html">👥 Clientes</a></li>
                     <li><a href="processos.html">📁 Processos</a></li>
-                    <li><a href="usuarios.html">👽 Criar conta de Funcionário</a></li>
+                    <li><a href="clientes.html">👥 Clientes</a></li>
+                    <li><a href="setores.html">🏢 Setores</a></li>
+                    <li><a href="usuarios.html">👽 Funcionários </a></li>
                 </ul>
             </nav>
         </aside>
@@ -40,9 +41,9 @@
                 
                 <div class="filter-controls">
                     <div>
-                        <label for="filter-client-select">Cliente:</label>
-                        <select id="filter-client-select">
-                            <option value="all">Todos os Clientes</option>
+                        <label for="filter-setor-select">Setor:</label>
+                        <select id="filter-setor-select">
+                            <option value="all">Todos os Setores</option>
                             </select>
                     </div>
                     <div>
@@ -52,6 +53,7 @@
                             <option value="Em Andamento">Em Andamento</option>
                             <option value="Concluído">Concluído</option>
                             <option value="Pausado">Pausado</option>
+                            <option value="Não Iniciado">Não Iniciado</option>
                         </select>
                     </div>
                     <div>
@@ -71,8 +73,7 @@
                         <span>Cliente</span>
                         <span>Status</span>
                     </div>
-                    <ul id="process-list">
-                        </ul>
+                    <ul id="process-list"></ul>
                     <div class="pagination-controls">
                         <button id="prev-button">Anterior</button>
                         <span id="page-info"></span>
@@ -100,6 +101,7 @@
                 <div class="details-grid">
                     <div><strong>ID do Processo:</strong> <span id="detail-processo-id"></span></div>
                     <div><strong>Status:</strong> <span id="detail-processo-status"></span></div>
+                    <div class="full-width"><strong>Setor Responsável:</strong> <span id="detail-processo-setor"></span></div>
                 </div>
                 <hr class="details-hr">
                 <h3>Informações do Cliente</h3>
@@ -124,16 +126,21 @@
             <form id="add-process-form" class="modal-body">
                 <div class="form-group">
                     <label for="new-process-name">Nome do Processo:</label>
-                    <input type="text" id="new-process-name" required placeholder="Ex: Desenvolvimento do novo App">
+                    <input type="text" id="new-process-name" name="processName" required placeholder="Ex: Desenvolvimento do novo App">
                 </div>
-                <div class="form-group">
-                    <label for="new-process-client-select">Cliente:</label>
-                    <select id="new-process-client-select" required>
-                        </select>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="new-process-client-select">Cliente:</label>
+                        <select id="new-process-client-select" name="clientId" required></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-process-setor-select">Setor Responsável:</label>
+                        <select id="new-process-setor-select" name="setor" required></select>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" id="cancel-add-process-btn" class="btn-secondary">Cancelar</button>
-                    <button type="submit" id="save-new-process-btn" class="btn-primary">Salvar Processo</button>
+                    <button type="submit" class="btn-primary">Salvar Processo</button>
                 </div>
             </form>
         </div>
