@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#003d3c"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <!-- Título -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logosemfundo"
+        android:adjustViewBounds="true"
+        android:contentDescription="Logo Bless Future no topo" />
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BLESS FUTURE"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:textColor="#ffff"
+        android:layout_marginTop="80dp" />
+
+    <!-- Saudação -->
+    <TextView
+        android:id="@+id/tvSaudacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Olá, tudo bem?"
+        android:textSize="29sp"
+        android:textColor="#c9972d"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/tvOrganizeProcessos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confira seus processos organizacionais por aqui."
+        android:textSize="25sp"
+        android:textColor="#fff"
+        android:layout_marginTop="20dp" />
+
+    <!-- Espaço antes do botão -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="91dp" />
+
+    <!-- Botão Entrar -->
+    <Button
+        android:id="@+id/btEntrar"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="ENTRAR"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/dourado"
+        android:layout_gravity="center" />
+
+</LinearLayout>

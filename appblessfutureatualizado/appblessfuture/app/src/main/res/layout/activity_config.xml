@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#003d3c"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Logo -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:maxWidth="438dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logodourado"
+            android:layout_marginTop="16dp" />
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configurações"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_marginTop="40dp" />
+
+        <!-- Descrição -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gerencie sua conta"
+            android:textSize="16sp"
+            android:textColor="#c9972d"
+            android:layout_marginTop="8dp" />
+
+        <!-- Campo Nome -->
+        <EditText
+            android:id="@+id/editNomeConfig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome completo"
+            android:textColor="#c9972d"
+            android:textColorHint="#c9972d"
+            android:padding="12dp"
+            android:layout_marginTop="30dp" />
+
+        <!-- Campo E-mail -->
+        <EditText
+            android:id="@+id/editEmailConfig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            android:textColor="#c9972d"
+            android:textColorHint="#c9972d"
+            android:padding="12dp"
+            android:layout_marginTop="20dp" />
+
+        <!-- Campo Telefone -->
+        <EditText
+            android:id="@+id/editTelefoneConfig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Telefone"
+            android:inputType="phone"
+            android:textColor="#c9972d"
+            android:textColorHint="#c9972d"
+            android:padding="12dp"
+            android:layout_marginTop="20dp" />
+
+        <!-- Botão Editar Dados -->
+        <Button
+            android:id="@+id/btnEditarDados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salvar Alterações"
+            android:textColor="#ffffff"
+            android:backgroundTint="@color/dourado"
+            android:layout_marginTop="40dp" />
+
+        <!-- Botão Sair da Conta -->
+        <Button
+            android:id="@+id/btnSair"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sair da Conta"
+            android:textColor="#ffffff"
+            android:backgroundTint="@color/dourado"
+            android:layout_marginTop="20dp" />
+
+        <!-- Botão Excluir Conta -->
+        <Button
+            android:id="@+id/btnExcluirConta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Excluir Conta"
+            android:textColor="#ffffff"
+            android:backgroundTint="#c9972d"
+            android:layout_marginTop="20dp" />
+
+        <!-- Botão Voltar -->
+        <Button
+            android:id="@+id/btnVoltarConfig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voltar"
+            android:textColor="#ffffff"
+            android:backgroundTint="@color/dourado"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+</ScrollView>

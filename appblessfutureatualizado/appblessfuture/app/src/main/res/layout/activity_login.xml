@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#003d3c">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#003d3c"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:maxWidth="438dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logodourado" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logosemfundo"
+            android:adjustViewBounds="true"
+            android:contentDescription="Logo Bless Future no topo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Faça login:"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp" />
+
+        <EditText
+            android:id="@+id/txtLoginNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite seu nome:"
+            android:textColor="#c9972d"
+            android:textColorHint="#c9972d"
+            android:padding="12dp"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/txtLoginSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite sua senha:"
+            android:inputType="textPassword"
+            android:textColor="#c9972d"
+            android:textColorHint="#c9972d"
+            android:padding="12dp"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:id="@+id/btentrarlogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Entrar"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/dourado"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Esqueceu sua senha?"
+            android:textAlignment="center"
+            android:textColor="#c9972d"
+            android:textSize="18sp"
+            android:layout_marginTop="30dp" />
+
+        <Button
+            android:id="@+id/btsenha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clique aqui"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/dourado"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Não tem cadastro?"
+            android:textAlignment="center"
+            android:textColor="#c9972d"
+            android:textSize="18sp"
+            android:layout_marginTop="30dp" />
+
+        <Button
+            android:id="@+id/btcadas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clique aqui"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/dourado"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#003d3c"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:maxWidth="438dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logodourado" />
+
+
+    <!-- Título -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logosemfundo"
+        android:adjustViewBounds="true"
+        android:contentDescription="Logo Bless Future no topo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recuperar Senha"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:layout_marginTop="60dp" />
+
+    <!-- Subtexto -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informe seu e-mail para recuperar a senha:"
+        android:textColor="#c9972d"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center" />
+
+    <!-- Campo e-mail -->
+    <EditText
+        android:id="@+id/editEmailRecuperacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu e-mail"
+        android:inputType="textEmailAddress"
+        android:textColor="#c9972d"
+        android:textColorHint="#c9972d"
+        android:padding="12dp"
+        android:layout_marginTop="30dp" />
+
+    <!-- Botão Enviar -->
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:backgroundTint="@color/dourado"
+        android:layout_marginTop="30dp" />
+
+    <!-- Botão Voltar -->
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/dourado"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center" />
+
+</LinearLayout>
