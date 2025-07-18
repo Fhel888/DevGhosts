@@ -22,6 +22,8 @@ services:
       MYSQL_DATABASE: erp
       MYSQL_USER: erpuser
       MYSQL_PASSWORD: senha123
+      TZ: America/Sao_Paulo
+    command: --default-time-zone='-03:00'
     volumes:
       - dbdata:/var/lib/mysql
       - ./mysql-init:/docker-entrypoint-initdb.d

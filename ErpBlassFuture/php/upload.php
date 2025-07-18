@@ -14,8 +14,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $caminho_destino = "uploads/" . $nome_arquivo_seguro;
 
   if (move_uploaded_file($arquivo_info['tmp_name'], $caminho_destino)) {
-    $stmt = $pdo->prepare("INSERT INTO processos (nome, setor, arquivo) VALUES (?, ?, ?)");
-    $stmt->execute([$nome, $setor, $nome_arquivo_seguro]);
+    // Pega a data/hora atual no fuso horário configurado
+    $data_atual = date('Y-m-d H:i:s');
+    
+    $stmt = $pdo->prepare("INSERT INTO processos (nome, setor, arquivo, data_upload) VALUES (?, ?, ?, ?)");
+    $stmt->execute([$nome, $setor, $nome_arquivo_seguro, $data_atual]);
     echo "<h3>Upload realizado com sucesso!</h3>";
   } else {
     echo "<h3>Falha no upload do arquivo.</h3>";
