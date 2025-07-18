@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/criarProcesso">
+
+    <RelativeLayout
+        android:id="@+id/headerCriaProcesso"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="@color/VerdeEscuro">
+
+        <ImageButton
+            android:id="@+id/btCriaProcessoVoltar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/botaovoltar"
+            android:scaleType="fitCenter"
+            android:backgroundTint="@android:color/transparent"
+            app:tint="@color/dourado"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Criar Processos"
+            android:textColor="@color/branco"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"/>
+
+        <ImageButton
+            android:id="@+id/btCriaProcessoConfig"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/botaoconfig"
+            android:scaleType="fitCenter"
+            android:backgroundTint="@android:color/transparent"
+            app:tint="@color/dourado"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeCriarProcesso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerCriaProcesso">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="15sp"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="170sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logosemfundo"
+                    android:adjustViewBounds="true"
+                    android:paddingBottom="30dp"/>
+
+                <EditText
+                    android:id="@+id/txtCriaProcessoNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:hint="Nome do Processo"
+                    android:textColor="@color/dourado"
+                    android:textColorHint="@color/cinza"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:background="@drawable/border_txtview"
+                    android:textAlignment="center" />
+
+                <Spinner
+                    android:id="@+id/spCriaProcessoSetor"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:textColor="@color/preto"
+                    android:textColorHint="@color/cinza"
+                    android:background="@drawable/border_txtview" />
+
+                <TextView
+                    android:id="@+id/txtCriaProcessoNenhum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="20sp"
+                    android:text="Nenhum arquivo selecionado"
+                    android:textColor="@color/branco"
+                    android:textAlignment="center"/>
+
+                <Button
+                    android:id="@+id/btCriaProcessoPdf"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20sp"
+                    android:text="Selecionar PDF"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/dourado"
+                    android:textColor="@color/branco"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/txtCriaProcessoErro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="-87dp"
+                    android:padding="10dp"
+                    android:text="A ERP está offline (sem conexão)"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:textStyle="bold|italic" />
+
+                <Button
+                    android:id="@+id/btCriaProcessoEnviar"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="140sp"
+                    android:text="Enviar"
+                    android:backgroundTint="@color/dourado"
+                    android:textColor="@color/branco"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

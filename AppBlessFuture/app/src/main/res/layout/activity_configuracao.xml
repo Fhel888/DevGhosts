@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/configuracao">
+
+    <RelativeLayout
+        android:id="@+id/headerConfig"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="@color/VerdeEscuro">
+
+        <ImageButton
+            android:id="@+id/btConfVoltar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/botaovoltar"
+            android:scaleType="fitCenter"
+            android:backgroundTint="@android:color/transparent"
+            app:tint="@color/dourado"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configurações"
+            android:textColor="@color/branco"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"/>
+
+        <Button
+            android:id="@+id/btConfSair"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:text="Sair da Conta"
+            android:padding="5dp"
+            android:textColor="@color/branco"
+            android:backgroundTint="@color/dourado"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeConfiguracao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerConfig">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="15sp"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="170sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logosemfundo"
+                    android:adjustViewBounds="true"
+                    android:paddingBottom="30dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dados do cadastro:"
+                        android:layout_marginTop="40dp"
+                        android:textAlignment="center"/>
+
+                    <!-- TEXTO DE AJUDA QUANDO CLICAR NO CAMPO: -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="-20dp"
+                        android:text="Digite seu nome completo! "
+                        android:textSize="12dp"
+                        android:textStyle="bold|italic"
+                        android:visibility="gone"
+                        android:id="@+id/helpConfNome" />
+
+                    <EditText
+                        android:id="@+id/txtConfNome"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:hint="Nome completo"
+                        android:textSize="15sp"
+                        android:textColor="@color/dourado"
+                        android:textColorHint="@color/cinza"
+                        android:layout_marginTop="20dp"
+                        android:inputType="textPersonName"
+                        android:maxLength="50"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/border_txtview"
+                        android:textAlignment="center" />
+
+                    <!-- TEXTO DE AJUDA QUANDO CLICAR NO CAMPO: -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="-10dp"
+                        android:text="Digite seu nome de usuário! "
+                        android:textSize="12dp"
+                        android:textStyle="bold|italic"
+                        android:visibility="gone"
+                        android:id="@+id/helpConfUser" />
+
+                    <EditText
+                        android:id="@+id/txtConfUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:hint="Usuário:"
+                        android:textSize="15sp"
+                        android:textColor="@color/dourado"
+                        android:textColorHint="@color/cinza"
+                        android:layout_marginTop="10dp"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/border_txtview"
+                        android:textAlignment="center"/>
+
+                    <Spinner
+                        android:id="@+id/spConfSetor"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:textColor="@color/preto"
+                        android:textColorHint="@color/cinza"
+                        android:background="@drawable/border_txtview" />
+
+                    <!-- TEXTO DE AJUDA QUANDO CLICAR NO CAMPO: -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="-10dp"
+                        android:text="Digite apenas os números com DDD! "
+                        android:textSize="12dp"
+                        android:textStyle="bold|italic"
+                        android:visibility="gone"
+                        android:id="@+id/helpConfCel" />
+
+                    <EditText
+                        android:id="@+id/txtConfCel"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:hint="Celular:"
+                        android:textSize="15sp"
+                        android:textColor="@color/dourado"
+                        android:textColorHint="@color/cinza"
+                        android:layout_marginTop="10dp"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/border_txtview"
+                        android:textAlignment="center" />
+
+                    <!-- TEXTO DE AJUDA QUANDO CLICAR NO CAMPO: -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="-10dp"
+                        android:text="Digite seu e-mail completo com @! "
+                        android:textSize="12dp"
+                        android:textStyle="bold|italic"
+                        android:visibility="gone"
+                        android:id="@+id/helpConfEmail" />
+
+                    <EditText
+                        android:id="@+id/txtConfEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:hint="E-mail:"
+                        android:textSize="15sp"
+                        android:textColor="@color/dourado"
+                        android:textColorHint="@color/cinza"
+                        android:layout_marginTop="10dp"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="50"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/border_txtview"
+                        android:textAlignment="center" />
+
+                    <!-- TEXTO DE AJUDA QUANDO CLICAR NO CAMPO: -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="-10dp"
+                        android:text="A senha deve conter no mínimo 6 caracteres! "
+                        android:textSize="12dp"
+                        android:textStyle="bold|italic"
+                        android:visibility="gone"
+                        android:id="@+id/helpConfSenha" />
+
+                    <EditText
+                        android:id="@+id/txtConfSenha"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:hint="Senha:"
+                        android:textSize="15sp"
+                        android:textColor="@color/dourado"
+                        android:textColorHint="@color/cinza"
+                        android:layout_marginTop="10dp"
+                        android:inputType="textPassword"
+                        android:maxLength="12"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/border_txtview"
+                        android:textAlignment="center"/>
+
+                    <!-- TEXTO DE AJUDA QUANDO CLICAR NO CAMPO: -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="-10dp"
+                        android:text="As senhas devem ser iguais! "
+                        android:textSize="12dp"
+                        android:textStyle="bold|italic"
+                        android:visibility="gone"
+                        android:id="@+id/helpConfConfSenha" />
+
+                    <EditText
+                        android:id="@+id/txtConfConfSenha"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:hint="Confirme sua senha:"
+                        android:textSize="15sp"
+                        android:textColor="@color/dourado"
+                        android:textColorHint="@color/cinza"
+                        android:layout_marginTop="10dp"
+                        android:inputType="textPassword"
+                        android:maxLength="12"
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"
+                        android:background="@drawable/border_txtview"
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/btConfAlterar"
+                        android:layout_width="200sp"
+                        android:layout_height="wrap_content"
+                        android:text="Salvar Alterações"
+                        android:textColor="@color/branco"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/dourado"
+                        android:layout_marginTop="50dp"
+                        android:layout_gravity="center"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Deseja excluir sua conta?" />
+
+                        <Button
+                            android:id="@+id/btConfExcluir"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="0dp"
+                            android:text="Clique Aqui"
+                            android:textColor="@color/AzulLink"
+                            android:backgroundTint="@android:color/transparent" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

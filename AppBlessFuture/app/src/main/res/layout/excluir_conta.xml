@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/border_dialog">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tem certeza que deseja excluir sua conta?\nEssa ação não poderá ser desfeita.\n\nConfirme sua senha:"
+        android:textColor="@color/preto"
+        android:textSize="16dp"
+        android:textAlignment="center" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="40dp"
+        android:textSize="15dp"
+        android:inputType="textPassword"
+        android:hint="Confirmar senha"
+        android:textColorHint="@color/preto"
+        android:textAlignment="center"
+        android:singleLine="true"
+        android:imeOptions="actionNext"
+        android:background="@drawable/border_txtview"
+        android:id="@+id/txtSenhaExcluir"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Excluir Conta"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/Verde"
+        android:id="@+id/btExcluirConta"/>
+
+</LinearLayout>

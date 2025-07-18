@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/border_item_lista">
+
+    <TextView
+        android:id="@+id/txtItemProcessoNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome" />
+
+    <TextView
+        android:id="@+id/txtItemProcessoSetor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Setor"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/txtItemProcessoData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50sp"
+        android:layout_marginRight="50sp"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/btItemProcessoPdf"
+            android:layout_width="0dp"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:padding="0sp"
+            android:text="Ver PDF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/dourado"/>
+
+        <Button
+            android:id="@+id/btItemProcessoExcluir"
+            android:layout_width="0dp"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:padding="0sp"
+            android:layout_marginStart="50sp"
+            android:text="Excluir"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/dourado"/>
+
+    </LinearLayout>
+
+</LinearLayout>

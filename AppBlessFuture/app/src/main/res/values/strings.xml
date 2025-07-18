@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AppBlessFuture</string>
+    <string-array name="setores_array">
+        <item>Selecione um Setor</item> <!-- Opcional: item inicial -->
+        <item>Diagnóstico Empresarial</item>
+        <item>Estratégica e Planejamento</item>
+        <item>Processos e Operações</item>
+        <item>Financeira e Controladoria</item>
+        <item>Recursos Humanos</item>
+        <item>Marketing e Posicionamento</item>
+        <item>Suporte e Relacionamento c/ Cliente</item>
+    </string-array>
+
+</resources>

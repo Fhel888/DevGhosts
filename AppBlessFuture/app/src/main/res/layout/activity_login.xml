@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Verde"
+    android:padding="20dp"
+    android:gravity="center"
+    android:id="@+id/login">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="180sp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logosemfundo"
+        android:adjustViewBounds="true"
+        android:paddingBottom="30dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:id="@+id/txtLoginNome"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="60sp"
+        android:layout_marginRight="60sp"
+        android:hint="Digite seu Email"
+        android:textSize="15sp"
+        android:textColor="@color/dourado"
+        android:textColorHint="@color/cinza"
+        android:layout_marginTop="60dp"
+        android:inputType="textEmailAddress"
+        android:maxLength="50"
+        android:singleLine="true"
+        android:imeOptions="actionNext"
+        android:background="@drawable/border_txtview"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/txtLoginSenha"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="60sp"
+        android:layout_marginRight="60sp"
+        android:hint="Digite sua senha:"
+        android:textSize="15sp"
+        android:textColor="@color/dourado"
+        android:textColorHint="@color/cinza"
+        android:layout_marginTop="10dp"
+        android:inputType="textPassword"
+        android:maxLength="12"
+        android:singleLine="true"
+        android:imeOptions="actionDone"
+        android:background="@drawable/border_txtview"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Esqueceu sua senha?"
+            android:textSize="14dp"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/btLoginRecuperar"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Recuperar Senha"
+            android:textSize="14dp"
+            android:textColor="@color/AzulLink"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="4dp"
+            android:padding="1dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btLoginEntrar"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:text="Entrar"
+        android:textSize="18sp"
+        android:textColor="@color/branco"
+        android:textStyle="bold"
+        android:backgroundTint="@color/dourado"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Não possui uma conta?"
+            android:textSize="14dp"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/btLoginCad"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Criar Conta"
+            android:textSize="14dp"
+            android:textColor="@color/AzulLink"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="4dp"
+            android:padding="1dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

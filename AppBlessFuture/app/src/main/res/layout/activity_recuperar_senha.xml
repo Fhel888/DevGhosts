@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/recuperarSenha">
+
+    <RelativeLayout
+        android:id="@+id/headerRecuperar"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="@color/VerdeEscuro">
+
+        <ImageButton
+            android:id="@+id/btRecVoltar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/botaovoltar"
+            android:scaleType="fitCenter"
+            android:backgroundTint="@android:color/transparent"
+            app:tint="@color/dourado"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recuperar Senha"
+            android:textColor="@color/branco"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15sp"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/headerRecuperar">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="170sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logosemfundo"
+            android:adjustViewBounds="true"
+            android:paddingBottom="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preencha seu e-mail, para recuperar sua senha:"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"/>
+
+        <!-- TEXTO DE AJUDA QUANDO CLICAR NO CAMPO: -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="-20dp"
+            android:text="Digite seu e-mail, o mesmo do cadastro! "
+            android:textSize="12dp"
+            android:textStyle="bold|italic"
+            android:visibility="gone"
+            android:id="@+id/helpRecEmail" />
+
+        <EditText
+            android:id="@+id/txtRecEmail"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:hint="E-mail:"
+            android:textSize="15sp"
+            android:textColor="@color/dourado"
+            android:textColorHint="@color/cinza"
+            android:layout_marginTop="20dp"
+            android:inputType="textEmailAddress"
+            android:maxLength="50"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:background="@drawable/border_txtview"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btRecCodigo"
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:text="Enviar Código"
+            android:textColor="@color/branco"
+            android:textSize="18sp"
+            android:backgroundTint="@color/dourado"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agora, digite o código enviado para você:"
+            android:layout_marginTop="60dp"
+            android:layout_gravity="center"/>
+
+        <!-- TEXTO DE AJUDA QUANDO CLICAR NO CAMPO: -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="-20dp"
+            android:text="Digite o código recebido no e-mail. (Verifique a caixa de spam) "
+            android:textSize="12dp"
+            android:textStyle="bold|italic"
+            android:visibility="gone"
+            android:id="@+id/helpRecCodigo" />
+
+        <EditText
+            android:id="@+id/txtRecCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:hint="Digite o código:"
+            android:textSize="15sp"
+            android:textColor="@color/dourado"
+            android:textColorHint="@color/cinza"
+            android:layout_marginTop="20dp"
+            android:inputType="textPassword"
+            android:maxLength="12"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:background="@drawable/border_txtview"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/btRecAltSenha"
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:text="Alterar Senha"
+            android:textColor="@color/branco"
+            android:textSize="18sp"
+            android:backgroundTint="@color/dourado"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

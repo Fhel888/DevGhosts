@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cadastro">
+
+    <RelativeLayout
+        android:id="@+id/headerCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="@color/VerdeEscuro">
+
+        <ImageButton
+            android:id="@+id/btCadVoltar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/botaovoltar"
+            android:scaleType="fitCenter"
+            android:backgroundTint="@android:color/transparent"
+            app:tint="@color/dourado"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cadastro"
+            android:textColor="@color/branco"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15sp"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/headerCadastro">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="170sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logosemfundo"
+            android:adjustViewBounds="true"
+            android:paddingBottom="30dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Por favor, insira seus dados:"
+                    android:layout_marginTop="40dp"
+                    android:textAlignment="center"/>
+
+                <!-- TEXTO DE AJUDA QUANDO CLICAR NO CAMPO: -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="-20dp"
+                    android:text="Digite seu nome completo! "
+                    android:textSize="12dp"
+                    android:textStyle="bold|italic"
+                    android:visibility="gone"
+                    android:id="@+id/helpCadastroNome" />
+
+                <EditText
+                    android:id="@+id/txtCadNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:hint="Digite seu nome completo:"
+                    android:textSize="15sp"
+                    android:textColor="@color/dourado"
+                    android:textColorHint="@color/cinza"
+                    android:layout_marginTop="20dp"
+                    android:inputType="textPersonName"
+                    android:maxLength="50"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:background="@drawable/border_txtview"
+                    android:textAlignment="center" />
+
+                <!-- TEXTO DE AJUDA QUANDO CLICAR NO CAMPO: -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="-10dp"
+                    android:text="Digite seu nome de usuário! "
+                    android:textSize="12dp"
+                    android:textStyle="bold|italic"
+                    android:visibility="gone"
+                    android:id="@+id/helpCadastroUser" />
+
+                <EditText
+                    android:id="@+id/txtCadUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:hint="Digite seu usuário:"
+                    android:textSize="15sp"
+                    android:textColor="@color/dourado"
+                    android:textColorHint="@color/cinza"
+                    android:layout_marginTop="10dp"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:background="@drawable/border_txtview"
+                    android:textAlignment="center"/>
+
+                <Spinner
+                    android:id="@+id/spCadSetor"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:textColor="@color/preto"
+                    android:textColorHint="@color/cinza"
+                    android:background="@drawable/border_txtview" />
+
+                <!-- TEXTO DE AJUDA QUANDO CLICAR NO CAMPO:-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="-10dp"
+                    android:text="Digite apenas os números com DDD! "
+                    android:textSize="12dp"
+                    android:textStyle="bold|italic"
+                    android:visibility="gone"
+                    android:id="@+id/helpCadastroCel" />
+
+                <EditText
+                    android:id="@+id/txtCadCel"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:hint="Digite seu celular:"
+                    android:textSize="15sp"
+                    android:textColor="@color/dourado"
+                    android:textColorHint="@color/cinza"
+                    android:layout_marginTop="10dp"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:background="@drawable/border_txtview"
+                    android:textAlignment="center" />
+
+                <!-- TEXTO DE AJUDA QUANDO CLICAR NO CAMPO: -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="-10dp"
+                    android:text="Digite seu e-mail completo com @! "
+                    android:textSize="12dp"
+                    android:textStyle="bold|italic"
+                    android:visibility="gone"
+                    android:id="@+id/helpCadastroEmail" />
+
+                <EditText
+                    android:id="@+id/txtCadEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:hint="Digite seu e-mail:"
+                    android:textSize="15sp"
+                    android:textColor="@color/dourado"
+                    android:textColorHint="@color/cinza"
+                    android:layout_marginTop="10dp"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:background="@drawable/border_txtview"
+                    android:textAlignment="center" />
+
+                <!-- TEXTO DE AJUDA QUANDO CLICAR NO CAMPO: -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="-10dp"
+                    android:text="A senha deve conter no mínimo 6 caracteres! "
+                    android:textSize="12dp"
+                    android:textStyle="bold|italic"
+                    android:visibility="gone"
+                    android:id="@+id/helpCadastroSenha" />
+
+                <EditText
+                    android:id="@+id/txtCadSenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:hint="Digite sua senha:"
+                    android:textSize="15sp"
+                    android:textColor="@color/dourado"
+                    android:textColorHint="@color/cinza"
+                    android:layout_marginTop="10dp"
+                    android:inputType="textPassword"
+                    android:maxLength="12"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:background="@drawable/border_txtview"
+                    android:textAlignment="center"/>
+
+                <!-- TEXTO DE AJUDA QUANDO CLICAR NO CAMPO: -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="-10dp"
+                    android:text="As senhas devem ser iguais! "
+                    android:textSize="12dp"
+                    android:textStyle="bold|italic"
+                    android:visibility="gone"
+                    android:id="@+id/helpCadastroConfSenha" />
+
+                <EditText
+                    android:id="@+id/txtCadConfSenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:hint="Confirmae sua senha:"
+                    android:textSize="15sp"
+                    android:textColor="@color/dourado"
+                    android:textColorHint="@color/cinza"
+                    android:layout_marginTop="10dp"
+                    android:inputType="textPassword"
+                    android:maxLength="12"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"
+                    android:background="@drawable/border_txtview"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:id="@+id/btCadCadastrar"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:text="Cadastrar"
+                    android:textColor="@color/branco"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/dourado"
+                    android:layout_marginTop="40dp"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

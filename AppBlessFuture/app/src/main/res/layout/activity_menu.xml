@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/menu">
+
+    <RelativeLayout
+        android:id="@+id/headerMenu"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="@color/VerdeEscuro">
+
+        <ImageButton
+            android:id="@+id/btMenuVoltar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/botaovoltar"
+            android:scaleType="fitCenter"
+            android:backgroundTint="@android:color/transparent"
+            app:tint="@color/dourado"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textColor="@color/branco"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"/>
+
+        <ImageButton
+            android:id="@+id/btMenuConfig"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/botaoconfig"
+            android:scaleType="fitCenter"
+            android:backgroundTint="@android:color/transparent"
+            app:tint="@color/dourado"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerMenu">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15sp"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="170sp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logosemfundo"
+                android:adjustViewBounds="true"
+                android:paddingBottom="30dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Olá,"
+                    android:textSize="22sp"
+                    android:textColor="@color/dourado"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtMenuUsuario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Usuário"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/branco" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seja Bem-vindo a\n  Bless Future"
+                android:textSize="22sp"
+                android:textColor="@color/dourado"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="90dp">
+
+                <ImageButton
+                    android:id="@+id/btMenuCriarProcesso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/newprocess"
+                    android:backgroundTint="@color/dourado" />
+
+                <ImageButton
+                    android:id="@+id/btMenuConsultaProcesso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/searchprocess"
+                    android:backgroundTint="@color/dourado"
+                    android:layout_marginLeft="50dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Novo"
+                    android:backgroundTint="@color/dourado"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Consultar"
+                    android:backgroundTint="@color/dourado"
+                    android:layout_marginLeft="92dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Processo"
+                    android:backgroundTint="@color/dourado"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Processos"
+                    android:backgroundTint="@color/dourado"
+                    android:layout_marginLeft="72dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
