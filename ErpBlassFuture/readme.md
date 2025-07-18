@@ -19,20 +19,7 @@ Este projeto utiliza Docker e Docker Compose para criar um ambiente de servidor 
     docker-compose up -d
     ```
 
-2.  **Crie a tabela no banco de dados:**
-    Acesse o **phpMyAdmin** no seu navegador: `http://localhost:8081` (Login: `root`, Senha: `root`). Selecione o banco de dados `erp` na lateral esquerda e execute o seguinte comando na aba "SQL" para criar a tabela necessária:
-    ```sql
-    CREATE TABLE `processos` (
-      `id` int(11) NOT NULL AUTO_INCREMENT,
-      `nome` varchar(255) NOT NULL,
-      `setor` varchar(255) NOT NULL,
-      `arquivo` varchar(255) NOT NULL,
-      `data_upload` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-      PRIMARY KEY (`id`)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-    ```
-
 3.  **Acesse a aplicação:**
-    Sua ERP estará disponível no seu navegador em: **`http://localhost:8080`**
+    Sua ERP estará disponível no seu navegador em: **`http://localhost:8080//index.php`**
 
 Pronto! Sua ERP está online (localmente) e pronta para ser usada.
