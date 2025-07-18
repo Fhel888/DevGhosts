@@ -20,6 +20,6 @@ Este projeto utiliza Docker e Docker Compose para criar um ambiente de servidor 
     ```
 
 3.  **Acesse a aplicação:**
-    Sua ERP estará disponível no seu navegador em: **`http://localhost:8080//index.php`**
+    Sua ERP estará disponível no seu navegador em: **`http://localhost:8080/index.php`**
 
 Pronto! Sua ERP está online (localmente) e pronta para ser usada.
